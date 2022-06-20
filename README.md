@@ -1,6 +1,6 @@
 # Wordle
 
-This repository lists a program to solve Wordle using probability and elimination. Fo a detailed discussion on how kindly check out this YouTube playlist (https://tinyurl.com/37m6m62m). In a nutshell the idea is to use most probable letters for a given attempt, and if eliminate options based on the feedback.
+This repository lists a program to solve Wordle using probability and elimination. Fo a detailed discussion on how this program works, kindly check out this YouTube playlist (https://tinyurl.com/37m6m62m). In a nutshell, the idea is to use most probable letters for a given attempt, and eliminate options based on the feedback.
 
 Python script is fully automated which requires only the word attempt and Wordle's feedback. R script automatically calculates probabilities but requires manual code editing for elimination.
 
