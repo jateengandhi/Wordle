@@ -159,7 +159,22 @@ def eliminate(col, att, fb, df):
                 elim[c] += [a]
             except KeyError:
                 elim[c] = [a]
-
+    
+    # Next two steps are for tackling 
+    # double letter attempt where one of the letters 
+    # is a yellow and the other is a black feedback
+    elim_str = []
+    for k in elim.keys():
+        if isinstance(k, str):
+            elim_str += [k]
+        
+        
+    for k in elim.keys():
+        if isinstance(k, int) & isinstance(elim[k], list):
+            for s in elim[k]:
+                if s in elim_str and k in elim[s]:
+                    elim[k].remove(s)
+    
     # Elimination operation
     for k in elim.keys():
 
